@@ -6,5 +6,6 @@ COPY package-lock.json ./
 RUN npm install --omit=dev
 COPY . .
 EXPOSE 3000
+RUN npm run build
 CMD ["npm", "start"]
 # Make sure "start" is in your package.json scripts
