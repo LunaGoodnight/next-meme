@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 # If you use npm with lockfile
-RUN npm install --omit=dev
+RUN npm install
 COPY . .
 RUN npm run build
 EXPOSE 3000
